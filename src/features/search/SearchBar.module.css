@@ -1,0 +1,73 @@
+/* --- src/features/posts/SearchBar.module.css --- */
+
+.form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 35px auto;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 16px 150px 16px 24px;
+    border-radius: 30px;
+    
+    /* L'effet Verre Dépoli */
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    
+    font-size: 1.1rem;
+    color: #1a1c1e;
+    font-family: inherit;
+    
+    /* Ombre de lévitation de base */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    outline: none;
+}
+
+/* État actif : la barre s'illumine et se soulève */
+.input:focus {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #007aff;
+    box-shadow: 0 12px 40px rgba(0, 122, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.input::placeholder {
+    color: #6a7178;
+    font-weight: 500;
+}
+
+.button {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    bottom: 6px;
+    
+    background: #007aff;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 0 24px;
+    
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.2);
+}
+
+.button:hover {
+    background: #0066d6;
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 122, 255, 0.3);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
